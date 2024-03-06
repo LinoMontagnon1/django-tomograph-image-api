@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  web:
+    image: tomografo_project
+    build: .
+    command: >
+      sh -c "echo 'http://127.0.0.1:8000/api/exames/' && python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
